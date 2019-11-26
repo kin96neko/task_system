@@ -56,6 +56,13 @@ p {
   background-color: teal;
 }
 
+li .header-list {
+  color: #fff !important;
+  font-weight: bold;
+  &:hover {
+    color: silver !important;
+  }
+}
 
 #logo {
   float: left;
@@ -68,7 +75,7 @@ p {
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: gray;
+    color: silver;
     text-decoration: none;
   }
 }
