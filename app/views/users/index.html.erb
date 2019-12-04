@@ -1,0 +1,10 @@
+
+<div class="main posts-index">
+  <div class="container">
+    <% @users.each do |user| %>
+      <div class="posts-index-item">
+        <%= user.name %>
+      </div>
+    <% end %>
+  </div>
+</div>
