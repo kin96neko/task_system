@@ -1,15 +1,25 @@
-<header>
-  <div class="header-logo">
-    <a href="/">MiniTweet</a>
-  </div>
-  <ul class="header-menus">
-    <li><a href="/about">MiniTweetについて</a></li>
-  </ul>
-</header>
 
-<div class="main posts-index">
-  <div class="container">
-    <div class="posts-index-item">絶対にフリーエンジニアになる!</div>
-    <div class="posts-index-item">Rails実践中！</div>
+<h1>タスク一覧</h1>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <table class="table table-hover" id="table-tasks">
+      <thead>
+        <tr>
+          <th>名称</th>
+          <th>作成日</th>
+          <th></th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <% @tasks.each do |task| %>
+          <tr>
+            <td><%= task.name %></td>
+            <td><%= l(task.created_at, format: :long) %></td>
+            <td></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 </div>
